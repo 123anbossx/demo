@@ -1,0 +1,17 @@
+* {
+    list-style: none;
+    text-decoration: none;
+}
+.homeClass {
+    width: 200px;
+    height: 200px;
+    background-color: #2db7f5;
+}
+.homeClass li{
+    cursor: pointer;
+}
+.homeChildren{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}

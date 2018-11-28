@@ -1,0 +1,48 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url("../images/timg.jpeg");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.dataContaner {
+    width: 800px;
+    margin: 0 auto;
+
+}
+
+.footContainer {
+    width: 300px;
+    height: 34px;
+    margin: 20px auto;
+
+}
+
+.active {
+    margin-top: 20px;
+}
+
+.top {
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #4A4F5E;
+    color: #FFFAF0;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+
+}
+.forget{
+    color: #2CB7F5;
+    cursor: pointer;
+
+}
+.title{
+    font-weight: bolder;
+    font-size: 14px;
+}

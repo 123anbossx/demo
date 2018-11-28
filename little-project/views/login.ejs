@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vipkid登陆</title>
+    <link rel="stylesheet" href="stylesheets/common.css">
+    <link rel="stylesheet" href="stylesheets/login.css">
+</head>
+<body>
+<%- include("../comment/header.ejs") %>
+<div id="app">
+    <div class="loginContainer" >
+        <div class="registerContainer" onselectstart="return false" @click="modal=true">去注册</div>
+        <li class="userContainer">
+           <span style="width: 40px;display: inline-block">用户名:</span> <i-input  type="text" v-model="username" style="width: 250px"></i-input>
+        </li>
+        <li class="passWordContainer">
+          <span style="width: 40px;display: inline-block">密码:</span> <i-input  type="password" v-model="password" style="width: 250px"></i-input>
+        </li>
+        <li class="loginButton">
+            <i-button type="info" @click="login">登陆</i-button>
+        </li>
+
+    </div>
+
+        <modal v-model="modal">
+            <p slot="header" style="text-align:center">
+                <span>欢迎注册VIPKID</span>
+            </p>
+            <li class="phoContainer">
+                <span style="width: 40px;display: inline-block">手机号:</span> <i-input  type="text" v-model="registerpho" style="width: 250px"></i-input>
+            </li>
+            <li class="regpassWord">
+                <span style="width: 40px;display: inline-block">密码:</span> <i-input  type="password" v-model="registerpwd" style="width: 250px"></i-input>
+            </li>
+            <div slot="footer">
+                <i-button type="info" size="large"  @click="register">注册</i-button>
+            </div>
+        </modal>
+
+
+</div>
+
+<script>
+    var vm=new Vue({
+        el:'#app',
+        data(){
+            return{
+                username:'',
+                password:'',
+                modal:false,
+                registerpho:'',
+                registerpwd:''
+            }
+        },
+        methods:{
+            register(){
+              axios.post('/regist',{
+                      username:vm.registerpho,
+                      password:vm.registerpwd,
+              })
+                  .then(function (response) {
+                    console.log(response)
+                      if(response.data=='注册成功'){
+
+                      }
+                  })
+                  .catch(function (error) {
+                     console.log(error);
+                  })
+            },
+            login(){
+             axios.post('/dologin',{
+                     username:vm.username,
+                     password:vm.password,
+             })
+                 .then(function (response) {
+                   window.open('/upload')
+                 })
+                 .then(function (erro) {
+
+                 })
+            }
+        }
+    })
+</script>
+</body>
+</html>

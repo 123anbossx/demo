@@ -1,0 +1,46 @@
+.loginContainer{
+    width: 500px;
+    height: 400px;
+    margin: 100px auto;
+    background-color: #eee9dd;
+    overflow: hidden;
+}
+.userContainer{
+    width: 350px;
+    height: 35px;
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.passWordContainer{
+    width: 350px;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.loginButton{
+    width: 55px;
+    margin: 10px auto;
+}
+.registerContainer {
+    width: 50px;
+    color:#74C3F2 ;
+    cursor: pointer;
+    margin-left: 450px;
+}
+.phoContainer{
+    width: 350px;
+    height: 35px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.regpassWord{
+    width: 350px;
+    height: 35px;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
